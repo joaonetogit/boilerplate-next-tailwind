@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+html {
+  background: linear-gradient(120deg, #03000c -14.45%, #020107 106.15%);
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+:where(img, picture, video, canvas) {
+  display: block;
+  max-width: 100%;
+}
+
+:where(img) {
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+:where(input, textarea, select) {
+  font: inherit;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word;
+}
+
+:where(fieldset, legend) {
+  padding: 0;
+  border: none;
+}
+
+:where(button) {
+  cursor: pointer;
+  border: none;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-appearance: none;
+}
