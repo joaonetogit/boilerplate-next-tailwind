@@ -1,3 +1,5 @@
+import Container from './Container'
+
 export default function Footer () {
-  return <footer>Footer</footer>
+  return <footer><Container>Footer</Container></footer>
 }

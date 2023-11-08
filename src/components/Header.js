@@ -1,3 +1,6 @@
+// Components
+import Container from './Container'
+
 export default function Header () {
-  return <header>Header</header>
+  return <header><Container>Header</Container></header>
 }
