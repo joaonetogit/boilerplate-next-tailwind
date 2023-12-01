@@ -1,6 +1,10 @@
 // Components
-import Container from './Container'
+import Container from './Container';
 
-export default function Footer () {
-  return <footer><Container>Footer</Container></footer>
+export default function Footer() {
+  return (
+    <footer>
+      <Container>Footer</Container>
+    </footer>
+  );
 }

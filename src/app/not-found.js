@@ -1,6 +1,12 @@
-// Core
-import Link from 'next/link'
+// Components
+import Button from '@/components/Button';
+import Container from '@/components/Container';
 
-export default function Page404 () {
-  return <><h1>Not Found Page</h1><Link href="/">Go back to Homepage</Link></>
+export default function Page404() {
+  return (
+    <Container>
+      <h1>Not Found Page</h1>
+      <Button label='Go to Homepage' href='/' />
+    </Container>
+  );
 }
