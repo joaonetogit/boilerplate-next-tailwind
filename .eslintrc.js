@@ -31,30 +31,12 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'react-hooks', 'import-helpers'],
+  plugins: ['react', 'react-hooks'],
   rules: {
+    'prettier/prettier': 'error',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'import-helpers/order-imports': [
-      'warn',
-      {
-        newlinesBetween: 'always',
-        groups: [
-          ['/^react/', '/^next/'],
-          'module',
-          'absolute',
-          '/^@/layouts/',
-          '/^@/components/',
-          '/^@/utils/',
-          '/^@/lib/',
-          '/^@/styles/',
-          '/^@/templates/',
-          ['parent', 'sibling', 'index'],
-        ],
-        alphabetize: { order: 'asc', ignoreCase: true },
-      },
-    ],
   },
 };

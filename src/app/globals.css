@@ -1,63 +1,94 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  color: #ffffff;
 }
 
-html {
-  background: linear-gradient(120deg, #03000c -14.45%, #020107 106.15%);
+*::before,
+*::after {
+  pointer-events: none;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
+  position: relative;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-family: 'Inter', sans-serif;
 }
 
-html,
-body {
-  scroll-behavior: smooth;
+figure {
+  margin: 0;
 }
 
-:where(img, picture, video, canvas) {
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+
+img,
+picture,
+video,
+canvas {
   display: block;
   max-width: 100%;
 }
 
-:where(img) {
+img {
   height: auto;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+  font-style: italic;
 }
 
-:where(input, textarea, select) {
+input,
+button,
+textarea,
+select {
   font: inherit;
+  border: none;
 }
 
-:where(p, h1, h2, h3, h4, h5, h6) {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-:where(fieldset, legend) {
-  padding: 0;
-  border: none;
+ul,
+ol {
+  list-style: none;
 }
 
-:where(button) {
+button {
+  all: unset;
   cursor: pointer;
-  border: none;
-  width: auto;
-  overflow: visible;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
   -webkit-appearance: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
